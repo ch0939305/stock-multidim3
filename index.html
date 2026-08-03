@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📊 多維股票3 年K線</title>
+<style>
+  :root {
+    --bg: #0d1117; --bg2: #161b22; --border: #30363d; --text: #e6edf3;
+    --text2: #8b949e; --hdr1: #1c2333; --hdr2: #21262d; --accent: #58a6ff;
+    --inputBg: #161b22; --inputBorder: #30363d; --hoverBg: rgba(136,136,136,0.06);
+    --shadow: rgba(0,0,0,0.3); --toggleBg: #21262d; --toggleBorder: #30363d;
+  }
+  .light {
+    --bg: #f6f8fa; --bg2: #fff; --border: #d0d7de; --text: #1f2328;
+    --text2: #656d76; --hdr1: #e8ecf0; --hdr2: #f0f2f5; --accent: #0969da;
+    --inputBg: #fff; --inputBorder: #d0d7de; --hoverBg: rgba(0,0,0,0.03);
+    --shadow: rgba(0,0,0,0.08); --toggleBg: #e8ecf0; --toggleBorder: #d0d7de;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: "Adobe 繁黑體 Std B","Noto Sans TC","Microsoft JhengHei",sans-serif;
+    background: var(--bg); color: var(--text); padding: 20px;
+    transition: background .3s, color .3s;
+  }
+  .header {
+    display:flex; justify-content:space-between; align-items:center;
+    margin-bottom:14px; flex-wrap:wrap; gap:10px;
+  }
+  .header h1 { font-size:19px; }
+  .header h1 span { color: var(--accent); }
+  .header-right { display:flex; align-items:center; gap:10px; }
+  .last-update { font-size:12px; color:var(--text2); }
+
+  .theme-toggle {
+    display:flex; align-items:center; gap:6px;
+    background:var(--toggleBg); border:1px solid var(--toggleBorder);
+    border-radius:20px; padding:3px; cursor:pointer; user-select:none;
+  }
+  .theme-toggle span { padding:3px 10px; border-radius:14px; font-size:12px; color:var(--text2); }
+  .theme-toggle span.active { background:var(--accent); color:#fff; }
+
+  .stock-selector {
+    display:flex; align-items:center; gap:12px; margin-bottom:12px; flex-wrap:wrap;
+  }
+  .stock-selector label { font-size:13px; color:var(--text2); }
+  #stockSelect {
+    padding:7px 14px; border-radius:7px; border:1px solid var(--inputBorder);
+    background:var(--inputBg); color:var(--text); font-size:14px; font-weight:bold;
+    min-width:180px; cursor:pointer;
+  }
+  #stockSelect:focus { outline:none; border-color:var(--accent); }
+  .stock-info { font-size:12px; color:var(--text2); }
+
+  .table-wrap {
+    overflow-x:auto; border-radius:8px; border:1px solid var(--border);
+    background:var(--bg2); box-shadow:0 2px 8px var(--shadow);
+  }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; min-width:680px; }
+  th, td {
+    padding:4px 8px; text-align:center; border:1px solid var(--border);
+    white-space:nowrap;
+  }
+  thead th { position:sticky; top:0; z-index:2; }
+  .h-tier1 { background:var(--hdr1); font-size:11px; color:var(--text2); letter-spacing:1px; font-weight:bold; }
+  .h-tier2 { background:var(--hdr2); font-size:12px; cursor:pointer; user-select:none; font-weight:bold; }
+  .h-tier2:hover { background:var(--hoverBg); }
+  .sort-icon { margin-left:2px; opacity:0.4; }
+  .sorted-asc .sort-icon, .sorted-desc .sort-icon { opacity:1; color:var(--accent); }
+
+  .date-cell { color:var(--text2); font-size:11px; }
+  .price-up { color:#f85149; }
+  .price-down { color:#3fb950; }
+  .kd-up { background:#ff0000; color:#fff; font-weight:bold; }
+  .kd-down { background:#00b050; color:#fff; font-weight:bold; }
+  tr:hover td { background:var(--hoverBg); }
+  .empty-msg { text-align:center; padding:50px 20px; color:var(--text2); font-size:14px; }
+  .note-cell { cursor:pointer; font-size:12px; color:var(--accent); max-width:90px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .note-cell:hover { background:var(--hoverBg); }
+  .note-input:focus { outline:none; }
+  .legend { margin-top:8px; font-size:11px; color:var(--text2); display:flex; gap:12px; flex-wrap:wrap; }
+  @media (max-width:768px) {
+    body { padding:10px; }
+    .header { flex-direction:column; align-items:flex-start; gap:6px; }
+    .header h1 { font-size:17px; }
+    #stockSelect { width:100%; }
+    table { min-width:620px; }
+    th, td { padding:3px 6px; }
+  }
+  @media (max-width:480px) {
+    body { padding:6px; }
+    .header h1 { font-size:15px; }
+    table { min-width:550px; }
+    th, td { padding:2px 4px; }
+    table { font-size:11px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📊 <span>多維</span>股票 20 日歷史</h1>
+  <div class="header-right">
+    <span class="last-update">⏱ <span id="updateTime">—</span></span>
+    <div class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+      <span id="themeLabelDark">🌙 夜</span>
+      <span id="themeLabelLight">☀️ 日</span>
+    </div>
+  </div>
+</div>
+
+<div class="stock-selector">
+  <label>🔖 選擇股票</label>
+  <select id="stockSelect" onchange="selectStock()"></select>
+  <span class="stock-info" id="stockInfo"></span>
+</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2" style="width:70px;" class="h-tier1">📅 日期</th>
+      <th colspan="3" class="h-tier1">💰 價格</th>
+      <th rowspan="2" style="width:50px;" class="h-tier1">📊 漲跌</th>
+      <th rowspan="2" style="width:48px;" class="h-tier1">📉 KD</th>
+      <th rowspan="2" style="width:52px;" class="h-tier1">📏 8日</th>
+      <th rowspan="2" style="width:52px;" class="h-tier1">📊 多空</th>
+      <th rowspan="2" style="width:90px;" class="h-tier1">📝 備註</th>
+    </tr>
+    <tr>
+      <th class="h-tier2" style="width:52px;" data-col="close" onclick="sortBy('close')">收盤 <span class="sort-icon">▲</span></th>
+      <th class="h-tier2" style="width:52px;" data-col="high" onclick="sortBy('high')">最高 <span class="sort-icon">▲</span></th>
+      <th class="h-tier2" style="width:52px;" data-col="low" onclick="sortBy('low')">最低 <span class="sort-icon">▲</span></th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+</table>
+<div id="pageInfo" style="text-align:center;padding:8px;font-size:13px;color:var(--text2)"></div>
+</div>
+
+<div class="legend">
+  <span>🔴↑ 🟢↓ KD</span><span>🔴漲 🟢跌</span><span>↕排序</span><span>🌙☀️日夜</span><span>📡 excl個股</span><span>✏️點備註欄輸入</span>
+</div>
+
+<script src="stock_data.js"></script>
+<script>
+let currentSort = { key: null, dir: 'asc' };
+let currentStock = null;
+let stockPage = 1;
+const ROWS = 16;
+
+function fmt(v, dp) { return (v == null || isNaN(v)) ? '—' : Number(v).toFixed(dp||2); }
+function fmtChg(v) {
+  if (v == null) return '—';
+  const prefix = v > 0 ? '+' : '';
+  return prefix + v.toFixed(2);
+}
+
+function populateSelector() {
+  const sel = document.getElementById('stockSelect');
+  sel.innerHTML = '';
+  const names = Object.keys(stockData).sort();
+  for (const name of names) {
+    const opt = document.createElement('option');
+    opt.value = name;
+    opt.textContent = name;
+    sel.appendChild(opt);
+  }
+  if (names.length > 0) {
+    sel.value = '台積電';
+    selectStock();
+  }
+}
+
+function selectStock() {
+  const sel = document.getElementById('stockSelect');
+  const name = sel.value;
+  if (!name || !stockData[name]) return;
+  currentStock = name;
+  stockPage = 1;
+  const h = stockData[name].history;
+  const last = h[h.length-1] || {};
+  document.getElementById('stockInfo').textContent =
+    `${h.length} 日｜最新 ${last.date} 收${last.close} 高${last.high} 低${last.low} KD${last.kd}`;
+  renderPage(h);
+}
+
+function renderPage(rows) {
+  const total = rows.length;
+  const pages = Math.ceil(total / ROWS);
+  if (stockPage > pages) stockPage = pages;
+  if (stockPage < 1) stockPage = 1;
+  
+  const start = total - stockPage * ROWS;
+  const end = total - (stockPage - 1) * ROWS;
+  const data = rows.slice(Math.max(0, start), end);
+  
+  const tbody = document.getElementById('tableBody');
+  let html = '';
+  const rev = [...data].reverse();
+  for (let i = 0; i < rev.length; i++) {
+    const s = rev[i];
+    const prevKd = i < rev.length-1 ? rev[i+1].kd : s.kd;
+    const chgClass = s.change > 0 ? 'price-up' : (s.change < 0 ? 'price-down' : '');
+    const kdClass = s.kd > prevKd ? 'kd-up' : s.kd < prevKd ? 'kd-down' : '';
+    const note = localStorage.getItem('note_' + currentStock + '_' + s.date) || '';
+    html += `<tr>
+      <td class="date-cell">${s.date}</td>
+      <td class="${chgClass}">${fmt(s.close, s.close % 1 === 0 ? 0 : 1)}</td>
+      <td class="${chgClass}">${fmt(s.high, s.high % 1 === 0 ? 0 : 1)}</td>
+      <td class="${chgClass}">${fmt(s.low, s.low % 1 === 0 ? 0 : 1)}</td>
+      <td class="${chgClass}">${fmtChg(s.change)}</td>
+      <td class="${kdClass}">${fmt(s.kd, 1)}</td>
+      <td>${fmt(s.range8, 1)}</td>
+      <td>${fmt(s.bullbear, 2)}</td>
+      <td class="note-cell" onclick="editNote(this,'${currentStock}','${s.date}')">${note || '✏️'}</td>
+    </tr>`;
+  }
+  tbody.innerHTML = html || '<tr><td colspan="10" class="empty-msg">無資料</td></tr>';
+  
+  // 頁碼
+  const pi = document.getElementById('pageInfo');
+  if (pages > 1) {
+    const a = Math.max(1, total - stockPage * ROWS + 1);
+    const b = Math.min(total, total - (stockPage - 1) * ROWS);
+    pi.innerHTML = `📄 ${a}-${b} / 共${total}日 &nbsp; <span style="cursor:pointer;color:var(--accent)" onclick="pg(-1)">◀ 上一頁</span> <span style="cursor:pointer;color:var(--accent)" onclick="pg(1)">下一頁 ▶</span>`;
+  } else { pi.innerHTML = `📄 共${total}日`; }
+}
+
+function pg(d) { stockPage += d; renderPage(stockData[currentStock].history); }
+
+// 保留舊名給其他函數用
+function renderTable(r) { renderPage(r); }
+
+function sortBy(col) {
+  if (currentSort.key === col) {
+    currentSort.dir = currentSort.dir === 'asc' ? 'desc' : 'asc';
+  } else {
+    currentSort.key = col;
+    currentSort.dir = 'asc';
+  }
+  updateSortClass();
+  applySort();
+}
+function updateSortClass() {
+  document.querySelectorAll('.h-tier2').forEach(th => {
+    th.classList.remove('sorted-asc', 'sorted-desc');
+    if (th.dataset.col === currentSort.key)
+      th.classList.add(currentSort.dir === 'asc' ? 'sorted-asc' : 'sorted-desc');
+  });
+}
+
+// ============ 備註 ============
+function editNote(td, stock, date) {
+  const key = 'note_' + stock + '_' + date;
+  const old = localStorage.getItem(key) || '';
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.value = old;
+  input.className = 'note-input';
+  input.style.width = '80px';
+  input.style.background = 'var(--inputBg)';
+  input.style.color = 'var(--text)';
+  input.style.border = '1px solid var(--accent)';
+  input.style.borderRadius = '4px';
+  input.style.padding = '2px 4px';
+  input.style.fontSize = '12px';
+  td.innerHTML = '';
+  td.appendChild(input);
+  input.focus();
+  input.select();
+  input.onblur = function() {
+    const val = input.value.trim();
+    if (val) {
+      localStorage.setItem(key, val);
+      td.innerHTML = val;
+      td.className = 'note-cell';
+    } else {
+      localStorage.removeItem(key);
+      td.innerHTML = '✏️';
+      td.className = 'note-cell';
+    }
+  };
+  input.onkeydown = function(e) {
+    if (e.key === 'Enter') { input.blur(); }
+  };
+}
+function applySort() {
+  if (!currentStock || !stockData[currentStock]) return;
+  let data = [...stockData[currentStock].history];
+  if (currentSort.key) {
+    const key = currentSort.key, dir = currentSort.dir === 'asc' ? 1 : -1;
+    data.sort((a,b) => ((a[key]??-999999) - (b[key]??-999999)) * dir);
+  }
+  renderTable(data);
+}
+function toggleTheme() {
+  const light = document.body.classList.toggle('light');
+  document.getElementById('themeLabelDark').classList.toggle('active', !light);
+  document.getElementById('themeLabelLight').classList.toggle('active', light);
+  localStorage.setItem('stockTheme', light ? 'light' : 'dark');
+}
+(function(){
+  const s = localStorage.getItem('stockTheme');
+  if(s==='light'){document.body.classList.add('light');document.getElementById('themeLabelDark').classList.remove('active');document.getElementById('themeLabelLight').classList.add('active')}
+  else document.getElementById('themeLabelDark').classList.add('active');
+})();
+
+document.getElementById('updateTime').textContent = new Date().toLocaleString('zh-TW',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'});
+if(typeof stockData!=='undefined'&&Object.keys(stockData).length>0) populateSelector();
+else document.getElementById('tableBody').innerHTML='<tr><td colspan="10" class="empty-msg">⚠️ 請執行 scripts/stock_fetch.py</td></tr>';
+</script>
+</body>
+</html>
