@@ -1,4 +1,4 @@
-// 產生於 2026-08-04 20:37  25 檔
+// 產生於 2026-08-04 20:38  25 檔
 const stockData = {
   "加權指數": {
     "ticker": "^TWII",
@@ -189,7 +189,7 @@ const stockData = {
       {"date": "2022/01/01", "close": 13.5, "high": 17.95, "low": 12.1, "change": -3.9, "kd": 44.43, "range8": 7.2, "bullbear": 3.19},
       {"date": "2023/01/01", "close": 15.65, "high": 18.2, "low": 13.25, "change": 2.15, "kd": 38.82, "range8": 8.8, "bullbear": 3.41},
       {"date": "2024/01/01", "close": 9.54, "high": 15.65, "low": 9.4, "change": -6.11, "kd": 26.12, "range8": 16.05, "bullbear": 4.19},
-      {"date": "2025/01/01", "close": 8.86, "high": 10.9, "low": 7.42, "change": -0.68, "kd": 19.69, "range8": 21.08, "bullbear": 4.15}
+      {"date": "2025/01/01", "close": 8.86, "high": 10.9, "low": 7.42, "change": -0.68, "kd": 19.7, "range8": 21.08, "bullbear": 4.15}
     ]
   },
   "台泥": {
@@ -237,7 +237,7 @@ const stockData = {
       {"date": "2022/01/01", "close": 27.66, "high": 39.02, "low": 22.76, "change": -0.15, "kd": 61.54, "range8": 27.7, "bullbear": 17.04},
       {"date": "2023/01/01", "close": 38.55, "high": 44.25, "low": 26.4, "change": 10.89, "kd": 68.59, "range8": 30.28, "bullbear": 20.76},
       {"date": "2024/01/01", "close": 26.1, "high": 41.2, "low": 25.6, "change": -12.45, "kd": 59.08, "range8": 21.5, "bullbear": 12.7},
-      {"date": "2025/01/01", "close": 21.95, "high": 27.6, "low": 18.05, "change": -4.15, "kd": 44.34, "range8": 14.95, "bullbear": 6.62}
+      {"date": "2025/01/01", "close": 21.95, "high": 27.6, "low": 18.05, "change": -4.15, "kd": 42.0, "range8": 14.95, "bullbear": 6.27}
     ]
   },
   "陽明": {
