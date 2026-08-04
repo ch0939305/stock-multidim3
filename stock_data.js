@@ -1,4 +1,4 @@
-// 產生於 2026-08-03 16:16  17 檔
+// 產生於 2026-08-04 18:37  25 檔
 const stockData = {
   "加權指數": {
     "ticker": "^TWII",
@@ -404,6 +404,193 @@ const stockData = {
       {"date": "2023/01/01", "close": 593.0, "high": 594.0, "low": 443.0, "change": 144.5, "kd": 81.81, "range8": 463.5, "bullbear": 379.18},
       {"date": "2024/01/01", "close": 1075.0, "high": 1100.0, "low": 574.0, "change": 482.0, "kd": 87.01, "range8": 921.0, "bullbear": 801.36},
       {"date": "2025/01/01", "close": 1550.0, "high": 1550.0, "low": 780.0, "change": 475.0, "kd": 91.34, "range8": 1340.0, "bullbear": 1223.95}
+    ]
+  },
+  "揚明光": {
+    "ticker": "3504",
+    "history": [
+      {"date": "2007/01/01", "close": 34.69, "high": 89.52, "low": 29.23, "change": 0, "kd": 36.35, "range8": null, "bullbear": null},
+      {"date": "2008/01/01", "close": 36.52, "high": 59.81, "low": 27.17, "change": 1.83, "kd": 29.23, "range8": null, "bullbear": null},
+      {"date": "2009/01/01", "close": 258.66, "high": 275.45, "low": 37.07, "change": 222.14, "kd": 50.57, "range8": null, "bullbear": null},
+      {"date": "2010/01/01", "close": 180.0, "high": 316.91, "low": 127.0, "change": -78.66, "kd": 51.29, "range8": null, "bullbear": null},
+      {"date": "2011/01/01", "close": 65.0, "high": 186.0, "low": 53.6, "change": -115.0, "kd": 38.54, "range8": null, "bullbear": null},
+      {"date": "2012/01/01", "close": 83.1, "high": 140.0, "low": 61.5, "change": 18.1, "kd": 32.13, "range8": null, "bullbear": null},
+      {"date": "2013/01/01", "close": 61.0, "high": 89.0, "low": 50.0, "change": -22.1, "kd": 25.31, "range8": null, "bullbear": null},
+      {"date": "2014/01/01", "close": 56.5, "high": 75.9, "low": 46.7, "change": -4.5, "kd": 20.24, "range8": 60.29, "bullbear": 12.2},
+      {"date": "2015/01/01", "close": 35.75, "high": 71.5, "low": 25.2, "change": -20.75, "kd": 14.7, "range8": 46.3, "bullbear": 6.8},
+      {"date": "2016/01/01", "close": 26.0, "high": 41.9, "low": 23.65, "change": -9.75, "kd": 10.07, "range8": 251.8, "bullbear": 25.35},
+      {"date": "2017/01/01", "close": 50.8, "high": 86.7, "low": 25.3, "change": 24.8, "kd": 9.79, "range8": 291.61, "bullbear": 285.48},
+      {"date": "2018/01/01", "close": 73.2, "high": 169.0, "low": 49.1, "change": 22.4, "kd": 12.16, "range8": 136.9, "bullbear": 16.64},
+      {"date": "2019/01/01", "close": 83.6, "high": 124.0, "low": 66.8, "change": 10.4, "kd": 20.41, "range8": 78.5, "bullbear": 16.02},
+      {"date": "2020/01/01", "close": 60.7, "high": 84.7, "low": 37.0, "change": -22.9, "kd": 22.1, "range8": 52.0, "bullbear": 11.49},
+      {"date": "2021/01/01", "close": 117.5, "high": 154.0, "low": 53.0, "change": 56.8, "kd": 36.26, "range8": 107.3, "bullbear": 38.9},
+      {"date": "2022/01/01", "close": 75.8, "high": 119.5, "low": 58.5, "change": -41.7, "kd": 36.13, "range8": 94.3, "bullbear": 34.07},
+      {"date": "2023/01/01", "close": 67.6, "high": 93.6, "low": 54.0, "change": -8.2, "kd": 34.16, "range8": 69.95, "bullbear": 23.89},
+      {"date": "2024/01/01", "close": 61.8, "high": 77.0, "low": 45.3, "change": -5.8, "kd": 31.52, "range8": 61.4, "bullbear": 19.35},
+      {"date": "2025/01/01", "close": 50.6, "high": 78.0, "low": 39.65, "change": -11.2, "kd": 26.88, "range8": 129.35, "bullbear": 34.76}
+    ]
+  },
+  "精剛": {
+    "ticker": "1584",
+    "history": [
+      {"date": "2008/01/01", "close": 8.03, "high": 36.02, "low": 6.26, "change": 0, "kd": 35.3, "range8": null, "bullbear": null},
+      {"date": "2009/01/01", "close": 14.39, "high": 15.35, "low": 7.5, "change": 6.36, "kd": 32.64, "range8": null, "bullbear": null},
+      {"date": "2010/01/01", "close": 29.75, "high": 32.13, "low": 11.65, "change": 15.36, "kd": 48.07, "range8": null, "bullbear": null},
+      {"date": "2011/01/01", "close": 18.36, "high": 37.76, "low": 17.01, "change": -11.39, "kd": 44.85, "range8": null, "bullbear": null},
+      {"date": "2012/01/01", "close": 14.24, "high": 22.68, "low": 11.58, "change": -4.12, "kd": 38.34, "range8": null, "bullbear": null},
+      {"date": "2013/01/01", "close": 12.59, "high": 15.61, "low": 11.72, "change": -1.65, "kd": 32.26, "range8": null, "bullbear": null},
+      {"date": "2014/01/01", "close": 10.88, "high": 16.21, "low": 9.36, "change": -1.71, "kd": 26.39, "range8": null, "bullbear": null},
+      {"date": "2015/01/01", "close": 13.27, "high": 16.18, "low": 10.46, "change": 2.39, "kd": 25.01, "range8": 29.75, "bullbear": 7.44},
+      {"date": "2016/01/01", "close": 13.41, "high": 16.18, "low": 10.32, "change": 0.14, "kd": 24.24, "range8": 8.67, "bullbear": 2.1},
+      {"date": "2017/01/01", "close": 10.83, "high": 19.04, "low": 10.36, "change": -2.58, "kd": 19.83, "range8": 21.76, "bullbear": 4.31},
+      {"date": "2018/01/01", "close": 6.36, "high": 11.77, "low": 4.87, "change": -4.47, "kd": 14.72, "range8": 32.88, "bullbear": 4.83},
+      {"date": "2019/01/01", "close": 8.63, "high": 9.8, "low": 5.92, "change": 2.27, "kd": 13.62, "range8": 16.75, "bullbear": 2.28},
+      {"date": "2020/01/01", "close": 11.11, "high": 12.57, "low": 6.23, "change": 2.48, "kd": 20.76, "range8": 9.38, "bullbear": 1.94},
+      {"date": "2021/01/01", "close": 16.56, "high": 21.48, "low": 9.57, "change": 5.45, "kd": 37.28, "range8": 12.12, "bullbear": 4.51},
+      {"date": "2022/01/01", "close": 21.65, "high": 26.27, "low": 14.12, "change": 5.09, "kd": 50.99, "range8": 15.81, "bullbear": 8.06},
+      {"date": "2023/01/01", "close": 35.7, "high": 44.56, "low": 20.83, "change": 14.05, "kd": 59.88, "range8": 34.24, "bullbear": 20.5},
+      {"date": "2024/01/01", "close": 28.85, "high": 44.45, "low": 27.5, "change": -6.85, "kd": 60.05, "range8": 34.08, "bullbear": 20.46},
+      {"date": "2025/01/01", "close": 23.2, "high": 32.9, "low": 20.7, "change": -5.65, "kd": 55.42, "range8": 28.02, "bullbear": 15.52}
+    ]
+  },
+  "台橡": {
+    "ticker": "2103",
+    "history": [
+      {"date": "2007/01/01", "close": 33.72, "high": 45.73, "low": 17.67, "change": 0, "kd": 52.4, "range8": null, "bullbear": null},
+      {"date": "2008/01/01", "close": 19.28, "high": 45.1, "low": 15.11, "change": -14.44, "kd": 39.48, "range8": null, "bullbear": null},
+      {"date": "2009/01/01", "close": 31.12, "high": 33.68, "low": 17.94, "change": 11.84, "kd": 43.75, "range8": null, "bullbear": null},
+      {"date": "2010/01/01", "close": 53.12, "high": 53.91, "low": 28.45, "change": 22.0, "kd": 61.82, "range8": null, "bullbear": null},
+      {"date": "2011/01/01", "close": 64.32, "high": 71.62, "low": 49.87, "change": 11.2, "kd": 70.24, "range8": null, "bullbear": null},
+      {"date": "2012/01/01", "close": 56.19, "high": 70.38, "low": 49.04, "change": -8.13, "kd": 71.06, "range8": null, "bullbear": null},
+      {"date": "2013/01/01", "close": 41.9, "high": 59.52, "low": 38.38, "change": -14.29, "kd": 63.17, "range8": null, "bullbear": null},
+      {"date": "2014/01/01", "close": 33.95, "high": 45.95, "low": 31.25, "change": -7.95, "kd": 53.22, "range8": 28.27, "bullbear": 15.04},
+      {"date": "2015/01/01", "close": 20.2, "high": 40.3, "low": 16.75, "change": -13.75, "kd": 38.48, "range8": 29.98, "bullbear": 11.53},
+      {"date": "2016/01/01", "close": 33.1, "high": 35.3, "low": 18.4, "change": 12.9, "kd": 36.26, "range8": 17.35, "bullbear": 6.29},
+      {"date": "2017/01/01", "close": 37.25, "high": 39.5, "low": 30.65, "change": 4.15, "kd": 36.63, "range8": 25.46, "bullbear": 9.32},
+      {"date": "2018/01/01", "close": 27.05, "high": 37.95, "low": 26.55, "change": -10.2, "kd": 30.67, "range8": 45.07, "bullbear": 13.82},
+      {"date": "2019/01/01", "close": 24.1, "high": 29.6, "low": 23.8, "change": -2.95, "kd": 24.91, "range8": 46.58, "bullbear": 11.6},
+      {"date": "2020/01/01", "close": 23.3, "high": 24.3, "low": 12.9, "change": -0.8, "kd": 22.64, "range8": 46.62, "bullbear": 10.55},
+      {"date": "2021/01/01", "close": 40.4, "high": 43.9, "low": 19.5, "change": 17.1, "kd": 34.75, "range8": 26.45, "bullbear": 9.19},
+      {"date": "2022/01/01", "close": 27.05, "high": 41.1, "low": 25.0, "change": -13.35, "kd": 37.44, "range8": 24.35, "bullbear": 9.11},
+      {"date": "2023/01/01", "close": 24.1, "high": 30.65, "low": 22.75, "change": -2.95, "kd": 37.0, "range8": 16.9, "bullbear": 6.25},
+      {"date": "2024/01/01", "close": 20.15, "high": 25.6, "low": 20.1, "change": -3.95, "kd": 32.46, "range8": 19.4, "bullbear": 6.29},
+      {"date": "2025/01/01", "close": 15.5, "high": 22.15, "low": 13.6, "change": -4.65, "kd": 24.43, "range8": 24.35, "bullbear": 5.94}
+    ]
+  },
+  "燿華": {
+    "ticker": "2367",
+    "history": [
+      {"date": "2007/01/01", "close": 26.42, "high": 35.35, "low": 13.2, "change": 0, "kd": 53.22, "range8": null, "bullbear": null},
+      {"date": "2008/01/01", "close": 7.14, "high": 27.22, "low": 4.85, "change": -19.28, "kd": 37.99, "range8": null, "bullbear": null},
+      {"date": "2009/01/01", "close": 12.91, "high": 13.61, "low": 5.78, "change": 5.77, "kd": 34.14, "range8": null, "bullbear": null},
+      {"date": "2010/01/01", "close": 18.28, "high": 21.96, "low": 9.06, "change": 5.37, "kd": 37.44, "range8": null, "bullbear": null},
+      {"date": "2011/01/01", "close": 11.71, "high": 20.13, "low": 10.45, "change": -6.57, "kd": 32.46, "range8": null, "bullbear": null},
+      {"date": "2012/01/01", "close": 9.82, "high": 15.2, "low": 7.57, "change": -1.89, "kd": 27.07, "range8": null, "bullbear": null},
+      {"date": "2013/01/01", "close": 11.57, "high": 13.84, "low": 8.42, "change": 1.75, "kd": 25.39, "range8": null, "bullbear": null},
+      {"date": "2014/01/01", "close": 12.78, "high": 14.32, "low": 10.94, "change": 1.21, "kd": 25.59, "range8": 24.41, "bullbear": 6.24},
+      {"date": "2015/01/01", "close": 12.58, "high": 15.44, "low": 8.04, "change": -0.2, "kd": 25.51, "range8": 22.37, "bullbear": 5.7},
+      {"date": "2016/01/01", "close": 8.83, "high": 12.73, "low": 8.46, "change": -3.75, "kd": 22.95, "range8": 7.83, "bullbear": 1.79},
+      {"date": "2017/01/01", "close": 22.46, "high": 26.28, "low": 8.83, "change": 13.63, "kd": 42.41, "range8": 17.44, "bullbear": 7.39},
+      {"date": "2018/01/01", "close": 13.48, "high": 25.56, "low": 11.5, "change": -8.98, "kd": 38.8, "range8": 15.1, "bullbear": 5.85},
+      {"date": "2019/01/01", "close": 33.23, "high": 38.66, "low": 13.03, "change": 19.75, "kd": 53.37, "range8": 31.09, "bullbear": 16.59},
+      {"date": "2020/01/01", "close": 21.92, "high": 34.02, "low": 15.2, "change": -11.31, "kd": 50.97, "range8": 25.59, "bullbear": 13.04},
+      {"date": "2021/01/01", "close": 19.85, "high": 24.44, "low": 15.85, "change": -2.07, "kd": 46.83, "range8": 13.5, "bullbear": 6.32},
+      {"date": "2022/01/01", "close": 17.25, "high": 24.6, "low": 15.1, "change": -2.6, "kd": 41.24, "range8": 16.55, "bullbear": 6.82},
+      {"date": "2023/01/01", "close": 20.0, "high": 23.4, "low": 15.8, "change": 2.75, "kd": 40.5, "range8": 14.93, "bullbear": 6.04},
+      {"date": "2024/01/01", "close": 32.9, "high": 45.6, "low": 18.4, "change": 12.9, "kd": 48.94, "range8": 36.76, "bullbear": 17.99},
+      {"date": "2025/01/01", "close": 27.2, "high": 33.75, "low": 19.8, "change": -5.7, "kd": 49.27, "range8": 22.24, "bullbear": 10.95}
+    ]
+  },
+  "興富發": {
+    "ticker": "2542",
+    "history": [
+      {"date": "2007/01/01", "close": 11.08, "high": 18.5, "low": 9.18, "change": 0, "kd": 40.12, "range8": null, "bullbear": null},
+      {"date": "2008/01/01", "close": 5.56, "high": 22.66, "low": 4.42, "change": -5.52, "kd": 28.82, "range8": null, "bullbear": null},
+      {"date": "2009/01/01", "close": 19.69, "high": 20.67, "low": 4.82, "change": 14.13, "kd": 47.13, "range8": null, "bullbear": null},
+      {"date": "2010/01/01", "close": 27.26, "high": 28.3, "low": 19.01, "change": 7.57, "kd": 63.3, "range8": null, "bullbear": null},
+      {"date": "2011/01/01", "close": 18.13, "high": 31.68, "low": 15.88, "change": -9.13, "kd": 58.96, "range8": null, "bullbear": null},
+      {"date": "2012/01/01", "close": 18.21, "high": 23.97, "low": 16.5, "change": 0.08, "kd": 56.16, "range8": null, "bullbear": null},
+      {"date": "2013/01/01", "close": 21.01, "high": 25.48, "low": 18.31, "change": 2.8, "kd": 57.72, "range8": null, "bullbear": null},
+      {"date": "2014/01/01", "close": 31.96, "high": 33.27, "low": 19.51, "change": 10.95, "kd": 70.31, "range8": 24.08, "bullbear": 16.93},
+      {"date": "2015/01/01", "close": 24.64, "high": 41.52, "low": 21.81, "change": -7.32, "kd": 65.04, "range8": 37.1, "bullbear": 24.12},
+      {"date": "2016/01/01", "close": 29.52, "high": 35.38, "low": 18.63, "change": 4.88, "kd": 65.92, "range8": 30.55, "bullbear": 20.13},
+      {"date": "2017/01/01", "close": 27.51, "high": 35.77, "low": 25.1, "change": -2.01, "kd": 64.55, "range8": 16.76, "bullbear": 10.81},
+      {"date": "2018/01/01", "close": 29.26, "high": 32.71, "low": 26.82, "change": 1.75, "kd": 60.43, "range8": 16.83, "bullbear": 10.17},
+      {"date": "2019/01/01", "close": 30.11, "high": 33.95, "low": 28.94, "change": 0.85, "kd": 58.78, "range8": 17.44, "bullbear": 10.25},
+      {"date": "2020/01/01", "close": 32.8, "high": 33.51, "low": 21.36, "change": 2.69, "kd": 60.9, "range8": 15.2, "bullbear": 9.25},
+      {"date": "2021/01/01", "close": 33.08, "high": 35.62, "low": 28.9, "change": 0.28, "kd": 61.82, "range8": 16.11, "bullbear": 9.95},
+      {"date": "2022/01/01", "close": 31.71, "high": 36.41, "low": 29.75, "change": -1.37, "kd": 60.26, "range8": 19.71, "bullbear": 11.87},
+      {"date": "2023/01/01", "close": 34.71, "high": 36.62, "low": 31.48, "change": 3.0, "kd": 63.6, "range8": 17.98, "bullbear": 11.43},
+      {"date": "2024/01/01", "close": 41.38, "high": 58.26, "low": 33.16, "change": 6.67, "kd": 61.53, "range8": 33.16, "bullbear": 20.4},
+      {"date": "2025/01/01", "close": 40.2, "high": 45.14, "low": 33.9, "change": -1.18, "kd": 58.03, "range8": 18.31, "bullbear": 10.62}
+    ]
+  },
+  "康舒": {
+    "ticker": "6282",
+    "history": [
+      {"date": "2007/01/01", "close": 15.61, "high": 24.95, "low": 11.71, "change": 0, "kd": 43.15, "range8": null, "bullbear": null},
+      {"date": "2008/01/01", "close": 11.7, "high": 16.21, "low": 9.66, "change": -3.91, "kd": 33.22, "range8": null, "bullbear": null},
+      {"date": "2009/01/01", "close": 27.34, "high": 29.34, "low": 11.32, "change": 15.64, "kd": 52.09, "range8": null, "bullbear": null},
+      {"date": "2010/01/01", "close": 24.19, "high": 28.43, "low": 18.86, "change": -3.15, "kd": 59.34, "range8": null, "bullbear": null},
+      {"date": "2011/01/01", "close": 15.67, "high": 24.48, "low": 12.0, "change": -8.52, "kd": 49.73, "range8": null, "bullbear": null},
+      {"date": "2012/01/01", "close": 19.57, "high": 22.0, "low": 14.29, "change": 3.9, "kd": 49.95, "range8": null, "bullbear": null},
+      {"date": "2013/01/01", "close": 29.2, "high": 34.15, "low": 19.53, "change": 9.63, "kd": 59.89, "range8": null, "bullbear": null},
+      {"date": "2014/01/01", "close": 33.63, "high": 51.92, "low": 28.2, "change": 4.43, "kd": 58.83, "range8": 40.21, "bullbear": 23.65},
+      {"date": "2015/01/01", "close": 22.15, "high": 37.01, "low": 12.0, "change": -11.48, "kd": 49.06, "range8": 27.34, "bullbear": 13.41},
+      {"date": "2016/01/01", "close": 22.91, "high": 27.15, "low": 18.38, "change": 0.76, "kd": 43.16, "range8": 18.01, "bullbear": 7.77},
+      {"date": "2017/01/01", "close": 21.19, "high": 24.29, "low": 19.81, "change": -1.72, "kd": 36.87, "range8": 9.57, "bullbear": 3.52},
+      {"date": "2018/01/01", "close": 18.0, "high": 22.96, "low": 16.33, "change": -3.19, "kd": 29.59, "range8": 12.48, "bullbear": 3.69},
+      {"date": "2019/01/01", "close": 23.0, "high": 23.72, "low": 17.53, "change": 5.0, "kd": 28.92, "range8": 9.43, "bullbear": 2.72},
+      {"date": "2020/01/01", "close": 27.58, "high": 30.2, "low": 14.57, "change": 4.58, "kd": 32.28, "range8": 19.57, "bullbear": 6.31},
+      {"date": "2021/01/01", "close": 34.87, "high": 38.06, "low": 21.43, "change": 7.29, "kd": 40.61, "range8": 30.48, "bullbear": 12.37},
+      {"date": "2022/01/01", "close": 28.43, "high": 37.06, "low": 25.05, "change": -6.44, "kd": 40.8, "range8": 25.05, "bullbear": 10.22},
+      {"date": "2023/01/01", "close": 41.1, "high": 59.5, "low": 27.72, "change": 12.67, "kd": 47.62, "range8": 41.11, "bullbear": 19.57},
+      {"date": "2024/01/01", "close": 30.25, "high": 45.6, "low": 28.8, "change": -10.85, "kd": 43.37, "range8": 25.78, "bullbear": 11.18},
+      {"date": "2025/01/01", "close": 42.3, "high": 50.3, "low": 22.1, "change": 12.05, "kd": 49.48, "range8": 33.96, "bullbear": 16.8}
+    ]
+  },
+  "通嘉": {
+    "ticker": "3588",
+    "history": [
+      {"date": "2008/01/01", "close": 30.06, "high": 84.99, "low": 23.64, "change": 0, "kd": 36.82, "range8": null, "bullbear": null},
+      {"date": "2009/01/01", "close": 151.81, "high": 197.98, "low": 30.28, "change": 121.75, "kd": 49.05, "range8": null, "bullbear": null},
+      {"date": "2010/01/01", "close": 100.84, "high": 155.14, "low": 91.14, "change": -50.97, "kd": 47.46, "range8": null, "bullbear": null},
+      {"date": "2011/01/01", "close": 38.48, "high": 101.61, "low": 31.3, "change": -62.36, "kd": 34.47, "range8": null, "bullbear": null},
+      {"date": "2012/01/01", "close": 40.9, "high": 52.43, "low": 33.55, "change": 2.42, "kd": 26.28, "range8": null, "bullbear": null},
+      {"date": "2013/01/01", "close": 31.54, "high": 40.98, "low": 27.42, "change": -9.36, "kd": 19.03, "range8": null, "bullbear": null},
+      {"date": "2014/01/01", "close": 35.33, "high": 54.05, "low": 29.04, "change": 3.79, "kd": 14.92, "range8": null, "bullbear": null},
+      {"date": "2015/01/01", "close": 24.12, "high": 37.63, "low": 16.21, "change": -11.21, "kd": 11.4, "range8": 68.77, "bullbear": 7.83},
+      {"date": "2016/01/01", "close": 29.36, "high": 35.09, "low": 19.84, "change": 5.24, "kd": 10.01, "range8": 178.14, "bullbear": 17.83},
+      {"date": "2017/01/01", "close": 21.29, "high": 30.57, "low": 20.16, "change": -8.07, "kd": 7.6, "range8": 134.97, "bullbear": 102.57},
+      {"date": "2018/01/01", "close": 16.69, "high": 25.65, "low": 15.65, "change": -4.6, "kd": 5.32, "range8": 85.96, "bullbear": 45.73},
+      {"date": "2019/01/01", "close": 24.08, "high": 26.94, "low": 16.25, "change": 7.39, "kd": 6.81, "range8": 36.18, "bullbear": 24.63},
+      {"date": "2020/01/01", "close": 56.14, "high": 57.6, "low": 15.4, "change": 32.06, "kd": 36.73, "range8": 42.19, "bullbear": 15.49},
+      {"date": "2021/01/01", "close": 133.4, "high": 155.19, "low": 44.36, "change": 77.26, "kd": 52.62, "range8": 126.14, "bullbear": 66.37},
+      {"date": "2022/01/01", "close": 50.53, "high": 139.18, "low": 41.53, "change": -82.87, "kd": 43.45, "range8": 122.96, "bullbear": 53.42},
+      {"date": "2023/01/01", "close": 80.78, "high": 90.09, "low": 44.55, "change": 30.25, "kd": 44.56, "range8": 70.25, "bullbear": 31.3},
+      {"date": "2024/01/01", "close": 67.2, "high": 120.1, "low": 58.1, "change": -13.58, "kd": 42.05, "range8": 99.93, "bullbear": 42.02},
+      {"date": "2025/01/01", "close": 48.4, "high": 69.6, "low": 39.85, "change": -18.8, "kd": 35.9, "range8": 53.94, "bullbear": 19.36}
+    ]
+  },
+  "新鉅科": {
+    "ticker": "3630",
+    "history": [
+      {"date": "2010/01/01", "close": 154.59, "high": 173.14, "low": 76.32, "change": 0, "kd": 60.28, "range8": null, "bullbear": null},
+      {"date": "2011/01/01", "close": 38.52, "high": 161.72, "low": 34.15, "change": -116.07, "kd": 41.23, "range8": null, "bullbear": null},
+      {"date": "2012/01/01", "close": 56.89, "high": 64.97, "low": 36.62, "change": 18.37, "kd": 32.94, "range8": null, "bullbear": null},
+      {"date": "2013/01/01", "close": 62.18, "high": 121.29, "low": 52.32, "change": 5.29, "kd": 28.68, "range8": null, "bullbear": null},
+      {"date": "2014/01/01", "close": 38.01, "high": 78.84, "low": 30.36, "change": -24.17, "kd": 20.91, "range8": null, "bullbear": null},
+      {"date": "2015/01/01", "close": 16.46, "high": 39.61, "low": 11.04, "change": -21.55, "kd": 15.05, "range8": null, "bullbear": null},
+      {"date": "2016/01/01", "close": 20.34, "high": 26.58, "low": 12.2, "change": 3.88, "kd": 11.94, "range8": null, "bullbear": null},
+      {"date": "2017/01/01", "close": 39.86, "high": 67.41, "low": 20.14, "change": 19.52, "kd": 13.89, "range8": 152.99, "bullbear": 21.25},
+      {"date": "2018/01/01", "close": 63.83, "high": 70.71, "low": 29.15, "change": 23.97, "kd": 20.11, "range8": 132.57, "bullbear": 26.65},
+      {"date": "2019/01/01", "close": 92.0, "high": 127.86, "low": 57.44, "change": 28.17, "kd": 31.32, "range8": 91.23, "bullbear": 28.57},
+      {"date": "2020/01/01", "close": 52.2, "high": 96.0, "low": 36.05, "change": -39.8, "kd": 32.62, "range8": 85.24, "bullbear": 27.8},
+      {"date": "2021/01/01", "close": 39.45, "high": 71.6, "low": 35.8, "change": -12.75, "kd": 29.85, "range8": 48.48, "bullbear": 14.47},
+      {"date": "2022/01/01", "close": 27.85, "high": 40.1, "low": 23.8, "change": -11.6, "kd": 24.69, "range8": 29.05, "bullbear": 7.17},
+      {"date": "2023/01/01", "close": 37.35, "high": 39.0, "low": 27.2, "change": 9.5, "kd": 23.97, "range8": 26.79, "bullbear": 6.42},
+      {"date": "2024/01/01", "close": 29.15, "high": 38.75, "low": 23.35, "change": -8.2, "kd": 20.86, "range8": 47.27, "bullbear": 9.86},
+      {"date": "2025/01/01", "close": 27.2, "high": 43.0, "low": 16.6, "change": -1.95, "kd": 17.08, "range8": 54.11, "bullbear": 9.24}
     ]
   }
 };
