@@ -1,4 +1,4 @@
-// 產生於 2026-08-04 20:29  25 檔
+// 產生於 2026-08-04 20:30  25 檔
 const stockData = {
   "加權指數": {
     "ticker": "^TWII",
@@ -213,7 +213,7 @@ const stockData = {
       {"date": "2022/01/01", "close": 33.65, "high": 45.63, "low": 29.8, "change": -9.98, "kd": 64.07, "range8": 25.85, "bullbear": 16.56},
       {"date": "2023/01/01", "close": 34.85, "high": 40.25, "low": 31.35, "change": 1.2, "kd": 58.23, "range8": 21.53, "bullbear": 12.53},
       {"date": "2024/01/01", "close": 31.7, "high": 35.2, "low": 30.8, "change": -3.15, "kd": 51.31, "range8": 10.67, "bullbear": 5.47},
-      {"date": "2025/01/01", "close": 23.2, "high": 35.45, "low": 20.25, "change": -8.5, "kd": 37.17, "range8": 15.2, "bullbear": 5.64}
+      {"date": "2025/01/01", "close": 23.2, "high": 35.45, "low": 20.25, "change": -8.5, "kd": 26.0, "range8": 15.2, "bullbear": 3.95}
     ]
   },
   "良得電": {
