@@ -357,7 +357,7 @@ const stockData = {
       {"date": "2022/01/01", "close": 36.9, "high": 42.8, "low": 31.1, "change": -2.65, "kd": 35.68, "range8": 31.4, "bullbear": 11.2},
       {"date": "2023/01/01", "close": 48.3, "high": 51.8, "low": 36.3, "change": 11.4, "kd": 45.98, "range8": 17.9, "bullbear": 8.23},
       {"date": "2024/01/01", "close": 72.6, "high": 95.4, "low": 42.5, "change": 24.3, "kd": 53.91, "range8": 59.3, "bullbear": 31.96},
-      {"date": "2025/01/01", "close": 36.9, "high": 73.5, "low": 36.55, "change": -35.7, "kd": 43.41, "range8": 53.5, "bullbear": 23.22}
+      {"date": "2025/01/01", "close": 36.9, "high": 73.5, "low": 36.55, "change": -35.7, "kd": 43.2, "range8": 53.5, "bullbear": 23.11}
     ]
   },
   "宏致": {
