@@ -1,4 +1,4 @@
-// 產生於 2026-08-04 20:30  25 檔
+// 產生於 2026-08-04 20:31  25 檔
 const stockData = {
   "加權指數": {
     "ticker": "^TWII",
@@ -474,7 +474,7 @@ const stockData = {
       {"date": "2022/01/01", "close": 27.05, "high": 41.1, "low": 25.0, "change": -13.35, "kd": 37.44, "range8": 24.35, "bullbear": 9.11},
       {"date": "2023/01/01", "close": 24.1, "high": 30.65, "low": 22.75, "change": -2.95, "kd": 37.0, "range8": 16.9, "bullbear": 6.25},
       {"date": "2024/01/01", "close": 20.15, "high": 25.6, "low": 20.1, "change": -3.95, "kd": 32.46, "range8": 19.4, "bullbear": 6.29},
-      {"date": "2025/01/01", "close": 15.5, "high": 22.15, "low": 13.6, "change": -4.65, "kd": 24.43, "range8": 24.35, "bullbear": 5.94}
+      {"date": "2025/01/01", "close": 15.5, "high": 22.15, "low": 13.6, "change": -4.65, "kd": 23.4, "range8": 24.35, "bullbear": 5.69}
     ]
   },
   "燿華": {
